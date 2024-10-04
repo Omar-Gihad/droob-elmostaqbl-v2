@@ -11,9 +11,10 @@ import office2 from "../assets/office2.png";
 import lamp from "../assets/lamp.png";
 import correct from "../assets/correct-circle.png";
 import rocket from "../assets/rocket.png";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const WhoWeAre = () => {
+  const nav = useNavigate();
   return (
     <div dir="rtl">
       {/* About Hero */}
@@ -48,7 +49,10 @@ const WhoWeAre = () => {
           </p>
           <div>
             <NavLink to="">
-              <button className="flex flex-row-reverse gap-3 border rounded-lg items-center font-semibold py-3 px-10 bg-blue-800 text-white">
+              <button
+                onClick={() => nav("/login")}
+                className="flex flex-row-reverse gap-3 border rounded-lg items-center font-semibold py-3 px-10 bg-blue-800 text-white"
+              >
                 <img src={longArrowRightW} /> إبدأ الآن
               </button>
             </NavLink>
@@ -174,11 +178,17 @@ const WhoWeAre = () => {
             </h1>
             <div className="flex gap-6 justify-center">
               <NavLink to="">
-                <button className="flex flex-row-reverse gap-3 border rounded-lg items-center font-semibold py-3 px-10 bg-white text-blue-800">
+                <button
+                  onClick={() => nav("/login")}
+                  className="flex flex-row-reverse gap-3 border rounded-lg items-center font-semibold py-3 px-10 bg-white text-blue-800"
+                >
                   <img src={longArrowRight} /> إبدأ الآن
                 </button>
               </NavLink>
-              <button className=" text-white font-semibold rounded">
+              <button
+                onClick={() => nav("/support-and-communication")}
+                className=" text-white font-semibold rounded"
+              >
                 احجز استشارة
               </button>
             </div>

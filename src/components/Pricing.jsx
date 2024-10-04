@@ -4,7 +4,7 @@ const Pricing = () => {
   return (
     <div
       dir="rtl"
-      className="bg-gradient-to-b from-custom-blue-start to-custom-blue-end py-20 px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw] lg:h-[600px] "
+      className="bg-gradient-to-r from-blue-start to-blue-end py-20 px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw] lg:h-[600px] "
     >
       {/* Text Section */}
       <div className="text-center text-white mb-10">
@@ -29,9 +29,7 @@ const Pricing = () => {
         <PricingCard
           most={"الأكثر شيوعا"}
           title={"دروب بلس شهريا"}
-          semiTitle={
-            "أكمل دورات متعددة واكسب أوراق اعتماد على المدى القصير"
-          }
+          semiTitle={"أكمل دورات متعددة واكسب أوراق اعتماد على المدى القصير"}
           pricing={"150"}
           desc={"احصل على شهادة عند الانتهاء بعد انتهاء الفترة التجريبية"}
         />

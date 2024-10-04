@@ -39,18 +39,111 @@ const blogPosts = [
     subTitleDesc4: `"DeepLearning.AI Generative Adversarial Networks (GANs) Specialization: تقدم على منصة Coursera، هذه السلسلة من الدورات تغطي كيفية بناء وتدريب شبكات GANs لإنشاء بيانات وصور جديدة.
     Udacity AI Programming with Python Nanodegree: هذه الدورة تركز على أساسيات البرمجة بالذكاء الاصطناعي باستخدام بايثون، وتغطي مواضيع مثل الشبكات العصبية والتعلم العميق."`,
   },
-  { id: "2", img: blogPost2 },
-  { id: "3", img: blogPost3 },
-  { id: "4", img: blogPost4 },
-  { id: "5", img: blogPost5 },
-  { id: "6", img: blogPost6 },
-  { id: "7", img: blogPost7 },
-  { id: "8", img: blogPost8 },
-  { id: "9", img: blogPost9 },
-  { id: "10", img: blogPost10 },
-  { id: "11", img: blogPost11 },
-  { id: "12", img: blogPost12 },
-  { id: "13", img: blogPost13 },
+  {
+    id: "2",
+    img: blogPost2,
+    title: "ماذا يجب أن تكسب: شهادة أم درجة؟",
+    author: "محمد علي",
+    authorImg: authorImg,
+    date: "August 20, 2022",
+  },
+  {
+    id: "3",
+    img: blogPost3,
+    title: "ماذا يجب أن تكسب: شهادة أم درجة؟",
+    author: "محمد علي",
+    authorImg: authorImg,
+    date: "August 20, 2022",
+  },
+  {
+    id: "4",
+    img: blogPost4,
+    title: "ماذا يجب أن تكسب: شهادة أم درجة؟",
+    author: "محمد علي",
+    authorImg: authorImg,
+    date: "August 20, 2022",
+  },
+  {
+    id: "5",
+    img: blogPost5,
+    title:
+      "أحدث الدورات والتخصصات والشهادات المهنية في تصميم UX الذكاء الاصطناعي التوليدية والعقارات والأمن السيبراني",
+    author: "محمد علي",
+    authorImg: authorImg,
+    date: "August 20, 2022",
+  },
+  {
+    id: "6",
+    img: blogPost6,
+    title:
+      "أحدث الدورات والتخصصات والشهادات المهنية في تصميم UX الذكاء الاصطناعي التوليدية والعقارات والأمن السيبراني",
+    author: "محمد علي",
+    authorImg: authorImg,
+    date: "August 20, 2022",
+  },
+  {
+    id: "7",
+    img: blogPost7,
+    title:
+      "أحدث الدورات والتخصصات والشهادات المهنية في تصميم UX الذكاء الاصطناعي التوليدية والعقارات والأمن السيبراني",
+    author: "محمد علي",
+    authorImg: authorImg,
+    date: "August 20, 2022",
+  },
+  {
+    id: "8",
+    img: blogPost8,
+    title:
+      "أحدث الدورات والتخصصات والشهادات المهنية في تصميم UX الذكاء الاصطناعي التوليدية والعقارات والأمن السيبراني",
+    author: "محمد علي",
+    authorImg: authorImg,
+    date: "August 20, 2022",
+  },
+  {
+    id: "9",
+    img: blogPost9,
+    title:
+      "أحدث الدورات والتخصصات والشهادات المهنية في تصميم UX الذكاء الاصطناعي التوليدية والعقارات والأمن السيبراني",
+    author: "محمد علي",
+    authorImg: authorImg,
+    date: "August 20, 2022",
+  },
+  {
+    id: "10",
+    img: blogPost10,
+    title:
+      "أحدث الدورات والتخصصات والشهادات المهنية في تصميم UX الذكاء الاصطناعي التوليدية والعقارات والأمن السيبراني",
+    author: "محمد علي",
+    authorImg: authorImg,
+    date: "August 20, 2022",
+  },
+  {
+    id: "11",
+    img: blogPost11,
+    title:
+      "أحدث الدورات والتخصصات والشهادات المهنية في تصميم UX الذكاء الاصطناعي التوليدية والعقارات والأمن السيبراني",
+    author: "محمد علي",
+    authorImg: authorImg,
+    date: "August 20, 2022",
+  },
+  {
+    id: "12",
+    img: blogPost12,
+    title:
+      "أحدث الدورات والتخصصات والشهادات المهنية في تصميم UX الذكاء الاصطناعي التوليدية والعقارات والأمن السيبراني",
+    author: "محمد علي",
+    authorImg: authorImg,
+    date: "August 20, 2022",
+  },
+  {
+    id: "13",
+    img: blogPost13,
+    title:
+      "أحدث الدورات والتخصصات والشهادات المهنية في تصميم UX الذكاء الاصطناعي التوليدية والعقارات والأمن السيبراني",
+    author: "محمد علي",
+    authorImg: authorImg,
+    date: "August 20, 2022",
+  },
 ];
 
 // 816210237

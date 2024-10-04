@@ -1,8 +1,10 @@
 // import Wrapper from "../assets/Wrapper.png";
 import wrapper2 from "../assets/wrapper2.png";
 import whiteArrow from "../assets/whiteArrow.png";
+import { useNavigate } from "react-router-dom";
 
 const About = () => {
+  const nav = useNavigate();
   return (
     <div
       dir="rtl"
@@ -21,7 +23,10 @@ const About = () => {
           نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات
           المطابع ودور النشر.
         </p>
-        <button className="flex gap-3 items-center bg-[#0055D2] py-3 px-6 border rounded-xl text-white mx-auto lg:mx-0">
+        <button
+          onClick={() => nav("/who-we-are")}
+          className="flex gap-3 items-center bg-[#0055D2] py-3 px-6 border rounded-xl text-white mx-auto lg:mx-0"
+        >
           تعلم المزيد <img src={whiteArrow} alt="arrow" />
         </button>
       </div>

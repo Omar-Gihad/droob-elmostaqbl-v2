@@ -307,10 +307,16 @@ const HeroSection = () => {
           </p>
 
           <div className="flex flex-row-reverse gap-8 pt-4">
-            <button className="text-[#0B236B] bg-white font-semibold border rounded-lg py-2 px-8">
+            <button
+              onClick={() => nav("/study-courses")}
+              className="text-[#0B236B] bg-white font-semibold border rounded-lg py-2 px-8"
+            >
               ابدأ الآن
             </button>
-            <button className=" text-white font-semibold rounded">
+            <button
+              onClick={() => nav("/support-and-communication")}
+              className=" text-white font-semibold rounded"
+            >
               احجز استشارة
             </button>
           </div>

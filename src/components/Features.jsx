@@ -3,8 +3,10 @@ import whiteArrow from "../assets/whiteArrow.png";
 import features2 from "../assets/features2.png";
 import features3 from "../assets/features3.png";
 import features4 from "../assets/features4.png";
+import { useNavigate } from "react-router-dom";
 
 const Features = () => {
+  const nav = useNavigate();
   return (
     <div dir="rtl" className="py-20 px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]">
       <div>
@@ -19,14 +21,19 @@ const Features = () => {
             نقدم لك الدعم والمتابعة اللازمة للوصول معًا إلى أفضل النتائج.
           </h1>
           <p className="text-base text-[#616161] mb-4">
-            نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر.
+            نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات
+            المطابع ودور النشر.
           </p>
-          <button className="flex gap-3 items-center bg-[#0055D2] py-3 px-6 border rounded-xl text-white mx-auto lg:mx-0">
+
+          <button
+            onClick={() => nav("/who-we-are")}
+            className="flex gap-3 items-center bg-[#0055D2] py-3 px-6 border rounded-xl text-white mx-auto lg:mx-0"
+          >
             اعرف المزيد
             <img src={whiteArrow} alt="arrow" />
           </button>
         </div>
-        
+
         {/* Hide images on mobile screens */}
         <div className="w-full  lg:w-[50%]">
           <img src={features2} alt="feature 2" className="" />

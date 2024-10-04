@@ -76,17 +76,23 @@ const Footer = () => {
             <h1 className="mb-5 text-xl">ارتباطات سريعة</h1>
             <div className="flex gap-2 mb-3 text-sm" onClick={scrollWindow}>
               <ArrowBackIosRoundedIcon />
-              <p>الرئيسية</p>
+              <Link to="/">
+                <p>الرئيسية</p>
+              </Link>
             </div>
-            <div className="flex gap-2 mb-3 text-sm">
+            <div className="flex gap-2 mb-3 text-sm" onClick={scrollWindow}>
               <ArrowBackIosRoundedIcon />
-              <p>عن المركز</p>
+              <Link to="who-we-are">
+                <p>عن المركز</p>
+              </Link>
             </div>
-            <div className="flex gap-2 mb-3 text-sm">
+            <div className="flex gap-2 mb-3 text-sm" onClick={scrollWindow}>
               <ArrowBackIosRoundedIcon />
-              <p>الدورات التدريبية</p>
+              <Link to="study-courses">
+                <p>الدورات التدريبية</p>
+              </Link>
             </div>
-            <div className="flex gap-2 mb-3 text-sm">
+            <div className="flex gap-2 mb-3 text-sm" onClick={scrollWindow}>
               <ArrowBackIosRoundedIcon />
               <Link to="support-and-communication">
                 <p>تواصل معنا</p>{" "}
