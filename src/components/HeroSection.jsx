@@ -170,11 +170,22 @@ const HeroSection = () => {
         {/* navigation links for below medium screens*/}
 
         <div
-          className={`fixed inset-0 z-50 py-8 transition-all bg-[#0B236B] ${
-            show ? "w-full opacity-100" : "hidden opacity-0"
+          className={`fixed inset-0 z-50 py-8 transition-all duration-300 ease-in-out bg-[#0B236B] ${
+            show
+              ? "w-full opacity-100 pointer-events-auto"
+              : "w-0 opacity-0 pointer-events-none"
           }`}
         >
           <ul className="flex flex-col items-center gap-10">
+            <img
+              className="absolute rotate-90 left-10 border-2 border-white rounded-lg p-2 cursor-pointer"
+              src={chevronDown}
+              alt=""
+              onClick={() => {
+                setShow(false);
+                setShowDropdown(false);
+              }}
+            />
             <NavLink
               to="/"
               onClick={() => {
