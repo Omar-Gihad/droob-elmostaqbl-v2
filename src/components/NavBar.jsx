@@ -26,7 +26,7 @@ const NavBar = () => {
         onClick={() => nav(`/`)}
         src={logoBlack}
         alt=""
-        className="w-80 cursor-pointer"
+        className="w-72 md:w-80 cursor-pointer"
       />
 
       {/* Navigation links for medium and above screens */}
