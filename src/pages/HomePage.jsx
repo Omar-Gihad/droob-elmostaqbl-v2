@@ -24,7 +24,6 @@ const HomePage = () => {
       <FAQs />
       <Pricing />
       <Testimonials />
-      <Footer />
     </Fragment>
   );
 };
