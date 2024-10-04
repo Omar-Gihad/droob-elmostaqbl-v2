@@ -14,4 +14,9 @@ body {
   color: #0055D2;
 } */
 
-
+.custom-dot {
+  font-size: 20px; /* Adjust the size of the dash */
+  color: #0055d2; /* Set the color of the dash */
+  margin-right: 5px;
+  cursor: pointer;
+}

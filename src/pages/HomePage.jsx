@@ -1,4 +1,4 @@
-import  { Fragment } from "react";
+import { Fragment } from "react";
 import HeroSection from "../components/HeroSection";
 import OurTrainingPrograms from "../components/OurTrainingPrograms.jsx";
 import About from "../components/About.jsx";
@@ -8,19 +8,23 @@ import { Credits } from "../components/Credits.jsx";
 import FAQs from "../components/FAQs.jsx";
 import Pricing from "../components/Pricing.jsx";
 import Testimonials from "../components/Testimonials.jsx";
+import Footer from "../components/Footer.jsx";
+import Courses from "../components/Courses.jsx";
 
 const HomePage = () => {
-  return(
+  return (
     <Fragment>
       <HeroSection />
-      <OurTrainingPrograms/>
-      <About/>
-      <Features/>
-      <CTA/>
-      <Credits/>
-      <FAQs/>
-      <Pricing/>
-      <Testimonials/>
+      <OurTrainingPrograms />
+      <About />
+      <Courses />
+      <Features />
+      <CTA />
+      <Credits />
+      <FAQs />
+      <Pricing />
+      <Testimonials />
+      <Footer />
     </Fragment>
   );
 };

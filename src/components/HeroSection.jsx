@@ -30,7 +30,7 @@ const HeroSection = () => {
           onClick={() => nav(`/`)}
           src={logoWhite}
           alt=""
-          className="w-64 md:w-80 cursor-pointer"
+          className="w-72 md:w-80 cursor-pointer"
         />
 
         {/* navigation links for medium and above screens*/}
