@@ -1,7 +1,9 @@
+import { useNavigate } from "react-router-dom";
 import cta from "../assets/CTA.png";
 import whiteArrow from "../assets/whiteArrow.png";
 
 const CTA = () => {
+  const nav = useNavigate();
   return (
     <div
       dir="rtl"
@@ -28,7 +30,10 @@ const CTA = () => {
             نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات
             المطابع ودور النشر. كان لوريم إيبسوم
           </p>
-          <button className="flex gap-3 items-center bg-[#0055D2] py-2 sm:py-3 px-4 sm:px-6 border rounded-xl text-white">
+          <button
+            onClick={() => nav("support-and-communication/contact-us-phone")}
+            className="flex gap-3 items-center bg-[#0055D2] py-2 sm:py-3 px-4 sm:px-6 border rounded-xl text-white"
+          >
             اتصل بنا
             <img src={whiteArrow} alt="arrow" />
           </button>
