@@ -100,7 +100,7 @@ const BlogPost = () => {
       <div className="flex flex-col justify-center items-center">
         <h1 className="text-[#2C2C2C] text-4xl mt-20 mb-10">مقالات ذات صلة</h1>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-28 gap-8 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-16 md:mx-28 gap-8 mb-20">
           {blogPosts.slice(10).map((item) => {
             return <BlogPostCard obj={item} key={item.id} img={item.img} />;
           })}
