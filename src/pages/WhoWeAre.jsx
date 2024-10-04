@@ -118,9 +118,9 @@ const WhoWeAre = () => {
       {/* Fifth Part */}
       <div className="flex flex-col-reverse md:flex-row items-center py-20 px-10 sm:px-[5vw] md:px-[7vw] lg:px-[9vw] gap-20">
         {/* Images */}
-        <div className="flex gap-3">
-          <img className="w-60 h-80" src={wrapper} />
-          <img className="w-60 h-80" src={office2} />
+        <div className="flex items-center justify-center gap-3">
+          <img className="w-40 h-70 md:w-60 md:h-80" src={wrapper} />
+          <img className="w-40 h-70 md:w-60 md:h-80" src={office2} />
         </div>
 
         {/* Info */}
@@ -139,7 +139,7 @@ const WhoWeAre = () => {
             عشوائي أخذتها من نص، لتكوّن كتيّب بمثابة دليل أو مرجع شكلي لهذه
             الأحرف.{" "}
           </p>
-          <div className="flex gap-40">
+          <div className="flex gap-20 md:gap-40">
             <div className="flex flex-col gap-6">
               <div className="flex gap-4 items-center">
                 <img src={correct} className="w-4 h-4" />
@@ -165,10 +165,10 @@ const WhoWeAre = () => {
       </div>
 
       {/* Sixth Part */}
-      <div className="flex justify-center items-center py-20 bg-gray-50">
-        <div className="bg-[url('assets/mask.png')] h-[330px] flex items-center justify-center">
+      <div className="flex justify-center items-center py-20 px-5 bg-gray-50">
+        <div className="bg-[url('assets/who-we-are-mask.png')] h-[330px] flex items-center justify-center ">
           <div className="flex flex-col gap-6 text-center w-3/4 items-center">
-            <h1 className="font-bold text-3xl text-white">
+            <h1 className="font-bold text-2xl md:text-3xl text-white">
               سجل الآن و إنضم لمجتمع دروب المستقبل و استفد من برامجنا التدريبية
               والاستشارية المصممة خصيصًا لك
             </h1>
