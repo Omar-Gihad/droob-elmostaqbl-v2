@@ -24,13 +24,13 @@ const HeroSection = () => {
   } = useContext(NavbarContext); // Accessing the context
   const nav = useNavigate(); // React router navigation
   return (
-    <>
-      <nav className=" relative z-50 flex flex-row-reverse justify-between items-center text-[#CCCCDD] bg-[#0B236B]  px-6 py-4 md:px-16">
+    <div className="bg-[url('src/assets/hero-mask.png')]">
+      <nav className=" relative z-50 flex flex-row-reverse justify-between items-center text-[#CCCCDD] px-6 py-4 md:px-16">
         <img
           onClick={() => nav(`/`)}
           src={logoWhite}
           alt=""
-          className="w-80 cursor-pointer"
+          className="w-64 md:w-80 cursor-pointer"
         />
 
         {/* navigation links for medium and above screens*/}
@@ -291,7 +291,7 @@ const HeroSection = () => {
         </div>
       </nav>
 
-      <div className="flex flex-col md:flex-row-reverse justify-between bg-[#0B236B] text-white px-8 md:px-20">
+      <div className="flex flex-col md:flex-row-reverse justify-between  text-white px-8 md:px-20">
         <div className="flex flex-col items-end pt-32 mb-8 lg:mb-0 ">
           <h1 className="text-right text-xl lg:text-3xl font-bold mb-4 ">
             وصول غير محدود إلى 500+ دورة تدريبية وبرامج
@@ -321,28 +321,32 @@ const HeroSection = () => {
           {/* <div className="absolute w-[450px] h-[450px] bg-[#1a2b6b] rounded-full top-[-50px] left-[-150px] lg:top-[-100px] lg:left-[-200px] z-0"></div> */}
 
           {/* Images */}
-          <img src={man} alt="Person" className="w-[550px] relative z-10" />
+          <img
+            src={man}
+            alt="Person"
+            className="md:w-[730px] md:bottom-[-1px] lg:w-[680px] xl:w-[550px] lg:bottom-[0px] xl:lg:bottom-0 relative z-10"
+          />
 
           <img
             src={img01}
-            alt="Person"
-            className="w-[170px] absolute top-[365px] left-[-15px] z-20"
+            alt="01"
+            className="w-[140px] md:w-[170px] absolute top-[235px] left-[-35px] md:top-[310px] md:left-[-15px] lg:top-[315px] lg:left-[-15px] xl:top-[365px] xl:left-[-15px] z-20"
           />
 
           <img
             src={img03}
-            alt="Person"
-            className="w-[190px] absolute top-[150px] left-[-30px] z-20"
+            alt="03"
+            className="w-[160px] md:w-[190px] absolute top-[100px] left-[-45px] md:top-[150px] md:left-[-35px] lg:top-[165px] lg:left-[-35px] xl:top-[150px] xl:left-[-30px] z-20"
           />
 
           <img
             src={img02}
-            alt="Person"
-            className="w-[130px] absolute top-[130px] left-[280px] z-5"
+            alt="02"
+            className="w-[100px] md:w-[130px] absolute top-[90px] left-[190px] md:top-[130px] md:left-[255px] lg:top-[130px] lg:left-[280px] xl:top-[130px] xl:left-[280px] z-5"
           />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

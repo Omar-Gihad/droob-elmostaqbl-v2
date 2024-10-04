@@ -21,7 +21,7 @@ export const Credits = () => {
           نـفتخر بأننا على مستوى ثقة عملائنا وتطلعاتهم
         </h3>
       </div>
-      <div className="flex gap-4 cursor-pointer">
+      <div className="flex flex-wrap justify-center gap-4 cursor-pointer">
         {images.map((item, index) => (
           <img key={index} src={item.img} className="w-[13%]" />
         ))}

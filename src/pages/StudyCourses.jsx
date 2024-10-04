@@ -8,7 +8,7 @@ import english from "../assets/study courses/english_course.png";
 import studying from "../assets/studying.png";
 
 const StudyCourses = () => {
-  const details = [
+  const courses = [
     {
       icon: business_course,
       name: "دورة إدارة الأعمال",
@@ -75,7 +75,7 @@ const StudyCourses = () => {
 
       {/* Cards Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 p-8 md:p-16">
-        {details.concat(details).map((item, index) => (
+        {courses.concat(courses).map((item, index) => (
           <Card
             key={index}
             icon={item.icon}
