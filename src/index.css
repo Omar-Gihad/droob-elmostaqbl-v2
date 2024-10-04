@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: almarai;
+}
+
+.active div {
+  display: block;
+}
+
+/* .active h2 {
+  color: #0055D2;
+} */
+
+
