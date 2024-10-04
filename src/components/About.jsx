@@ -34,7 +34,7 @@ const About = () => {
       <div className="hidden lg:flex gap-3">
         <img
           className="w-60 h-80"
-          src="src\assets\Wrapper.png"
+          src="src\assets\wrapper.png"
           alt="wrapper1"
         />
         <img className="w-60 h-80" src={wrapper2} alt="wrapper2" />
