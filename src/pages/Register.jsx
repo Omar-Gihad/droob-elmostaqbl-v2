@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import PartnershipForm from "../components/PartnershipForm";
 
 const Register = () => {
   return (
-    <div>Register</div>
-  )
-}
+    <div>
+      <PartnershipForm />
+    </div>
+  );
+};
 
-export default Register
+export default Register;

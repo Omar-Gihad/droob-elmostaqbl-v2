@@ -6,6 +6,7 @@ import accounting from "../assets/study courses/accounting_course.png";
 import mobile from "../assets/study courses/mobile-course.png";
 import english from "../assets/study courses/english_course.png";
 import studying from "../assets/studying.png";
+import { NavLink } from "react-router-dom";
 
 const StudyCourses = () => {
   const courses = [
@@ -50,18 +51,23 @@ const StudyCourses = () => {
     <div className="bg-[#F8FBFB]" dir="rtl">
       <div className=" relative ">
         {/* Image */}
-        <img src={studying} alt="Studying" className="w-full h-auto" />
+        <img src={studying} alt="about" className="w-full h-auto" />
 
         {/* Text on top of the image */}
         <div className="absolute inset-0 px-28 flex items-center justify-between">
-          <h1 className="text-white text-2xl md:text-6xl font-bold">
+          <h1 className="text-white text-3xl md:text-6xl font-bold">
             برامج الدبلوم{" "}
-            <p className="text-white text-xs md:text-lg font-thin mt-3">
-              الرئيسية / برامج العلوم / الدورات التدريبية
+            <p className="text-white text-xs md:text-lg font-thin mt-6">
+              <NavLink to="/">
+                <span className="text-gray-400 cursor-pointer"> الرئيسية</span>
+              </NavLink>{" "}
+              برامج الدبلوم / الدورات التدريبية
             </p>
           </h1>
         </div>
       </div>
+
+     
 
       <div className="flex flex-col items-center justify-center mt-20  md:mx-10 gap-3">
         <h1 className="text-[#2C2C2C] text-4xl font-bold">

@@ -1,6 +1,6 @@
 import React from "react";
 import BlogPostCard from "../components/BlogPostCard";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import blogPosts from "../assets/blog posts/blogPosts";
 import blogImg from "../assets/blog-img.png";
 
@@ -10,14 +10,17 @@ const Blog = () => {
     <div className="bg-[#F8FBFB]" dir="rtl">
       <div className=" relative ">
         {/* Image */}
-        <img src={blogImg} alt="Studying" className="w-full h-auto" />
+        <img src={blogImg} alt="about" className="w-full h-auto" />
 
         {/* Text on top of the image */}
         <div className="absolute inset-0 px-28 flex items-center justify-between">
           <h1 className="text-white text-3xl md:text-6xl font-bold">
             المدونة{" "}
             <p className="text-white text-xs md:text-lg font-thin mt-6">
-              الرئيسية / المدونة
+              <NavLink to="/">
+                <span className="text-gray-400 cursor-pointer"> الرئيسية</span>
+              </NavLink>{" "}
+              / المدونة
             </p>
           </h1>
         </div>

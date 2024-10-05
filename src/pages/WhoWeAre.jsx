@@ -11,6 +11,7 @@ import office2 from "../assets/office2.png";
 import lamp from "../assets/lamp.png";
 import correct from "../assets/correct-circle.png";
 import rocket from "../assets/rocket.png";
+import aboutImage from "../assets/about-img.png";
 import { NavLink, useNavigate } from "react-router-dom";
 
 const WhoWeAre = () => {
@@ -18,15 +19,21 @@ const WhoWeAre = () => {
   return (
     <div dir="rtl">
       {/* About Hero */}
-      <div className="bg-[url('assets/about-img.png')] w-[100%] h-[500px] bg-no-repeat">
-        <div className="text-white h-full flex flex-col gap-6 justify-center pr-48">
-          <h1 className="font-bold text-5xl">من نحن</h1>
-          <p className="font-normal">
-            <NavLink to="/">
-              <span className="text-gray-400 cursor-pointer">الرئيسية</span>
-            </NavLink>{" "}
-            / من نحن
-          </p>
+      <div className=" relative ">
+        {/* Image */}
+        <img src={aboutImage} alt="about" className="w-full h-auto" />
+
+        {/* Text on top of the image */}
+        <div className="absolute inset-0 px-28 flex items-center justify-between">
+          <h1 className="text-white text-3xl md:text-6xl font-bold">
+            من نحن{" "}
+            <p className="text-white text-xs md:text-lg font-thin mt-6">
+              <NavLink to="/">
+                <span className="text-gray-400 cursor-pointer"> الرئيسية</span>
+              </NavLink>{" "}
+              / من نحن
+            </p>
+          </h1>
         </div>
       </div>
 
@@ -58,7 +65,7 @@ const WhoWeAre = () => {
             </NavLink>
           </div>
         </div>
-        <div className="">
+        <div className="px-4">
           <img src={officeImg} />
         </div>
       </div>
@@ -172,11 +179,11 @@ const WhoWeAre = () => {
       <div className="flex justify-center items-center py-20 px-5 bg-gray-50">
         <div className="bg-[url('assets/who-we-are-mask.png')] h-[330px] flex items-center justify-center ">
           <div className="flex flex-col gap-6 text-center w-3/4 items-center">
-            <h1 className="font-bold text-2xl md:text-3xl text-white">
+            <h1 className="font-bold text-xl md:text-3xl text-white">
               سجل الآن و إنضم لمجتمع دروب المستقبل و استفد من برامجنا التدريبية
               والاستشارية المصممة خصيصًا لك
             </h1>
-            <div className="flex gap-6 justify-center">
+            <div className="flex flex-col md:flex-row gap-6 justify-center">
               <NavLink to="">
                 <button
                   onClick={() => nav("/login")}

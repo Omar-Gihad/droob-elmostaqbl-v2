@@ -4,21 +4,27 @@ import map from "../assets/map.png";
 import contact from "../assets/contact.png";
 import worktime from "../assets/workTime.png";
 import email from "../assets/email.png";
-import select from "../assets/select.png";
+import contactHero from "../assets/contactHero.png";
 
 const ContactUs2 = () => {
   return (
     <div dir="rtl">
       {/* Contact2 Hero */}
-      <div className="bg-[url('assets/contactHero.png')] w-[100%] h-[500px] bg-no-repeat">
-        <div className="text-white h-full flex flex-col gap-6 justify-center pr-48">
-          <h1 className="font-bold text-5xl">تواصل معنا</h1>
-          <p className="font-normal">
-            <NavLink to="/">
-              <span className="text-gray-400 cursor-pointer"> الرئيسية</span>
-            </NavLink>{" "}
-            / تواصل معنا
-          </p>
+      <div className=" relative ">
+        {/* Image */}
+        <img src={contactHero} alt="about" className="w-full h-auto" />
+
+        {/* Text on top of the image */}
+        <div className="absolute inset-0 px-28 flex items-center justify-between">
+          <h1 className="text-white text-3xl md:text-6xl font-bold">
+            تواصل معنا{" "}
+            <p className="text-white text-xs md:text-lg font-thin mt-6">
+              <NavLink to="/">
+                <span className="text-gray-400 cursor-pointer"> الرئيسية</span>
+              </NavLink>{" "}
+              / تواصل معنا
+            </p>
+          </h1>
         </div>
       </div>
 
