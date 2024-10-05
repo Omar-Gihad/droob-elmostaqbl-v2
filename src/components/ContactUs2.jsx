@@ -5,28 +5,13 @@ import contact from "../assets/contact.png";
 import worktime from "../assets/workTime.png";
 import email from "../assets/email.png";
 import contactHero from "../assets/contactHero.png";
+import HeaderImage from "./HeaderImage";
 
 const ContactUs2 = () => {
   return (
     <div dir="rtl">
       {/* Contact2 Hero */}
-      <div className=" relative ">
-        {/* Image */}
-        <img src={contactHero} alt="about" className="w-full h-auto" />
-
-        {/* Text on top of the image */}
-        <div className="absolute inset-0 px-28 flex items-center justify-between">
-          <h1 className="text-white text-3xl md:text-6xl font-bold">
-            تواصل معنا{" "}
-            <p className="text-white text-xs md:text-lg font-thin mt-6">
-              <NavLink to="/">
-                <span className="text-gray-400 cursor-pointer"> الرئيسية</span>
-              </NavLink>{" "}
-              / تواصل معنا
-            </p>
-          </h1>
-        </div>
-      </div>
+      <HeaderImage img={contactHero} title="تواصل معنا" />
 
       {/* Contact2 Form */}
       <div className="bg-gray-50 pt-28 pb-52">

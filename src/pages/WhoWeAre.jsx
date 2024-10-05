@@ -13,30 +13,14 @@ import correct from "../assets/correct-circle.png";
 import rocket from "../assets/rocket.png";
 import aboutImage from "../assets/about-img.png";
 import { NavLink, useNavigate } from "react-router-dom";
+import HeaderImage from "../components/HeaderImage";
 
 const WhoWeAre = () => {
   const nav = useNavigate();
   return (
     <div dir="rtl">
       {/* About Hero */}
-      <div className=" relative ">
-        {/* Image */}
-        <img src={aboutImage} alt="about" className="w-full h-auto" />
-
-        {/* Text on top of the image */}
-        <div className="absolute inset-0 px-28 flex items-center justify-between">
-          <h1 className="text-white text-3xl md:text-6xl font-bold">
-            من نحن{" "}
-            <p className="text-white text-xs md:text-lg font-thin mt-6">
-              <NavLink to="/">
-                <span className="text-gray-400 cursor-pointer"> الرئيسية</span>
-              </NavLink>{" "}
-              / من نحن
-            </p>
-          </h1>
-        </div>
-      </div>
-
+      <HeaderImage img={aboutImage} title="من نحن" />
       {/* Second Part */}
       <div className="flex flex-col md:flex-row gap-16 my-20 justify-evenly">
         <div className="flex flex-col justify-center gap-6 md:w-2/4 p-5">
