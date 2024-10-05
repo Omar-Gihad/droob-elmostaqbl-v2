@@ -18,9 +18,11 @@ const ContactUs1 = () => {
               <NavLink to="/">
                 <span className="text-gray-400 cursor-pointer"> الرئيسية</span>
               </NavLink>{" "}
-              <span className="text-gray-400 cursor-pointer">
-                / الدعم و التواصل
-              </span>
+              <NavLink to="/support-and-communication">
+                <span className="text-gray-400 cursor-pointer">
+                  / الدعم و التواصل
+                </span>
+              </NavLink>
               / تواصل معنا
             </p>
           </h1>
