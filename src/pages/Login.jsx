@@ -1,9 +1,12 @@
 import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import { Link, useNavigate } from "react-router-dom"; // Import Link and useNavigate for routing
 import logoBlack from "../assets/logo-black.png";
 
 const Login = () => {
+  const navigate = useNavigate();
+
   // Validation schema using Yup
   const validationSchema = Yup.object({
     email: Yup.string()
@@ -18,11 +21,13 @@ const Login = () => {
   const handleSubmit = (values) => {
     console.log(values);
     // You can handle form submission here (e.g., API request)
+    // After successful login, redirect to dashboard
+    navigate("/dashboard");
   };
 
   return (
     <div
-      className="max-w-lg mx-auto bg-[#EDF4FF] shadow-lg rounded-lg p-6 my-20"
+      className="max-w-lg mx-5 md:mx-auto  bg-[#EDF4FF] shadow-lg rounded-lg p-6 my-20"
       dir="rtl"
     >
       <div className="flex flex-col gap-3 justify-center items-start">
@@ -84,6 +89,16 @@ const Login = () => {
               />
             </div>
 
+            {/* Forgot Password Link */}
+            <div className="text-right">
+              <Link
+                to="/forgot-password"
+                className="text-[#0055D2] hover:underline"
+              >
+                نسيت كلمة المرور؟
+              </Link>
+            </div>
+
             {/* Submit Button */}
             <button
               type="submit"
@@ -94,6 +109,19 @@ const Login = () => {
           </Form>
         )}
       </Formik>
+
+      {/* Register Link */}
+      <div className="text-center mt-4">
+        <p className="text-sm ml-3 text-[#616161]">
+          ليس لديك حساب؟
+          <Link
+            to="/register"
+            className="text-[#0055D2] font-bold hover:underline mr-3"
+          >
+            أنشئ حساب الآن
+          </Link>
+        </p>
+      </div>
     </div>
   );
 };

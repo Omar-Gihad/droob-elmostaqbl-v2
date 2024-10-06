@@ -1,6 +1,7 @@
 import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import { Link } from "react-router-dom"; // Import Link for routing
 import logoBlack from "../assets/logo-black.png";
 
 const PartnershipForm = () => {
@@ -24,11 +25,11 @@ const PartnershipForm = () => {
 
   return (
     <div
-      className=" max-w-lg mx-auto bg-[#EDF4FF] shadow-lg rounded-lg p-6 my-20"
+      className="max-w-lg mx-5 md:mx-auto bg-[#EDF4FF] shadow-lg rounded-lg p-6 my-20"
       dir="rtl"
     >
       <div className="flex flex-col gap-3 justify-center items-start">
-        <img className="w-80 " src={logoBlack} alt="" />
+        <img className="w-80" src={logoBlack} alt="" />
         <h2 className="text-2xl text-right text-[#0B236B] mb-4">كن شريكك</h2>
         <p className="text-right text-[#616161] mb-6">
           من فضلك أدخل جميع البيانات المطلوبة بشكل صحيح للتواصل معك
@@ -54,7 +55,6 @@ const PartnershipForm = () => {
                 type="text"
                 id="name"
                 name="name"
-                // placeholder="الاسم رباعي"
                 className="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
               <ErrorMessage
@@ -76,7 +76,6 @@ const PartnershipForm = () => {
                 type="tel"
                 id="phone"
                 name="phone"
-                // placeholder="رقم الهاتف"
                 className="w-full p-3 border text-right border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
               <ErrorMessage
@@ -98,7 +97,6 @@ const PartnershipForm = () => {
                 type="email"
                 id="email"
                 name="email"
-                // placeholder="البريد الإلكتروني"
                 className="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
               <ErrorMessage
@@ -120,7 +118,6 @@ const PartnershipForm = () => {
                 type="url"
                 id="linkedin"
                 name="linkedin"
-                // placeholder="رابط لينكد إن"
                 className="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
               <ErrorMessage
@@ -140,6 +137,19 @@ const PartnershipForm = () => {
           </Form>
         )}
       </Formik>
+
+      {/* Login Link */}
+      <div className="text-center mt-4">
+        <p className="text-sm ml-3 text-[#616161]">
+          لديك حساب بالفعل؟
+          <Link
+            to="/login"
+            className="text-[#0055D2] mr-3 font-bold hover:underline"
+          >
+            تسجيل الدخول
+          </Link>
+        </p>
+      </div>
     </div>
   );
 };
