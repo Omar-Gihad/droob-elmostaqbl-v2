@@ -24,14 +24,16 @@ const PartnershipForm = () => {
 
   return (
     <div
-      className=" max-w-lg mx-auto bg-[#EDF4FF] shadow-lg rounded-lg p-6"
+      className=" max-w-lg mx-auto bg-[#EDF4FF] shadow-lg rounded-lg p-6 my-20"
       dir="rtl"
     >
-      <img src={logoBlack} alt="" />
-      <h2 className="text-2xl text-right text-blue-900 mb-4">كن شريكك</h2>
-      <p className="text-right text-gray-600 mb-6">
-        من فضلك أدخل جميع البيانات المطلوبة بشكل صحيح للتواصل معك
-      </p>
+      <div className="flex flex-col gap-3 justify-center items-start">
+        <img className="w-80 " src={logoBlack} alt="" />
+        <h2 className="text-2xl text-right text-[#0B236B] mb-4">كن شريكك</h2>
+        <p className="text-right text-[#616161] mb-6">
+          من فضلك أدخل جميع البيانات المطلوبة بشكل صحيح للتواصل معك
+        </p>
+      </div>
 
       <Formik
         initialValues={{ name: "", phone: "", email: "", linkedin: "" }}
@@ -39,12 +41,12 @@ const PartnershipForm = () => {
         onSubmit={handleSubmit}
       >
         {() => (
-          <Form className="space-y-4">
+          <Form className="space-y-5">
             {/* Name Field */}
             <div>
               <label
                 htmlFor="name"
-                className="block text-right mb-1 text-gray-700"
+                className="block text-right mb-3 text-[#2C2C2C]"
               >
                 الاسم رباعي
               </label>
@@ -52,7 +54,7 @@ const PartnershipForm = () => {
                 type="text"
                 id="name"
                 name="name"
-                placeholder="الاسم رباعي"
+                // placeholder="الاسم رباعي"
                 className="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
               <ErrorMessage
@@ -66,7 +68,7 @@ const PartnershipForm = () => {
             <div>
               <label
                 htmlFor="phone"
-                className="block text-right mb-1 text-gray-700"
+                className="block text-right mb-3 text-[#2C2C2C]"
               >
                 رقم الهاتف
               </label>
@@ -74,8 +76,8 @@ const PartnershipForm = () => {
                 type="tel"
                 id="phone"
                 name="phone"
-                placeholder="رقم الهاتف"
-                className="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                // placeholder="رقم الهاتف"
+                className="w-full p-3 border text-right border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
               <ErrorMessage
                 name="phone"
@@ -88,7 +90,7 @@ const PartnershipForm = () => {
             <div>
               <label
                 htmlFor="email"
-                className="block text-right mb-1 text-gray-700"
+                className="block text-right mb-3 text-[#2C2C2C]"
               >
                 البريد الإلكتروني
               </label>
@@ -96,7 +98,7 @@ const PartnershipForm = () => {
                 type="email"
                 id="email"
                 name="email"
-                placeholder="البريد الإلكتروني"
+                // placeholder="البريد الإلكتروني"
                 className="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
               <ErrorMessage
@@ -110,7 +112,7 @@ const PartnershipForm = () => {
             <div>
               <label
                 htmlFor="linkedin"
-                className="block text-right mb-1 text-gray-700"
+                className="block text-right mb-3 text-[#2C2C2C]"
               >
                 الملف الشخصي (LINKEDIN)
               </label>
@@ -118,7 +120,7 @@ const PartnershipForm = () => {
                 type="url"
                 id="linkedin"
                 name="linkedin"
-                placeholder="رابط لينكد إن"
+                // placeholder="رابط لينكد إن"
                 className="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
               <ErrorMessage
@@ -131,7 +133,7 @@ const PartnershipForm = () => {
             {/* Submit Button */}
             <button
               type="submit"
-              className="w-full bg-blue-600 text-white p-3 rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full bg-[#0055D2] text-white p-3 rounded hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
             >
               إرسال
             </button>

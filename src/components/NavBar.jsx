@@ -283,11 +283,27 @@ const NavBar = () => {
 
         <ul className="flex flex-col justify-center items-center py-10 my-5 gap-5 md:hidden">
           <Link to="register">
-            <button className="items-center">انضم كشريك</button>
+            <button
+              onClick={() => {
+                setShow(false);
+                setShowDropdown(false);
+                setSelectedOption("");
+              }}
+              className="items-center"
+            >
+              انضم كشريك
+            </button>
           </Link>
 
           <Link to="login">
-            <button className="items-center text-white bg-[#0055D2] font-semibold border rounded-lg py-2 px-5">
+            <button
+              onClick={() => {
+                setShow(false);
+                setShowDropdown(false);
+                setSelectedOption("");
+              }}
+              className="items-center text-white bg-[#0055D2] font-semibold border rounded-lg py-2 px-5"
+            >
               تسجيل دخول
             </button>
           </Link>

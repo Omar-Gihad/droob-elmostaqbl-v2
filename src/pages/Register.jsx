@@ -3,7 +3,7 @@ import PartnershipForm from "../components/PartnershipForm";
 
 const Register = () => {
   return (
-    <div>
+    <div dir="rtl">
       <PartnershipForm />
     </div>
   );
