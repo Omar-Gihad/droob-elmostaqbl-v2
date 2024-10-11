@@ -6,7 +6,6 @@ import accounting from "../assets/study courses/accounting_course.png";
 import mobile from "../assets/study courses/mobile-course.png";
 import english from "../assets/study courses/english_course.png";
 import studying from "../assets/studying.png";
-import { NavLink } from "react-router-dom";
 import HeaderImage from "../components/HeaderImage";
 
 const StudyCourses = () => {
