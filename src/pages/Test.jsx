@@ -1,5 +1,3 @@
-import React from "react";
-import FAQs from "../components/FAQs";
 import FAQs2 from "../components/FAQs2";
 import img from "../assets/test.png";
 

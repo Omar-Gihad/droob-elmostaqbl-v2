@@ -1,10 +1,15 @@
 import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import { Link } from "react-router-dom"; // Import Link for routing
+import { Link, useNavigate } from "react-router-dom";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import logoBlack from "../assets/logo-black.png";
+import { Axios } from "../utils/apiHandler";
 
 const PartnershipForm = () => {
+  const navigate = useNavigate();
+
   // Validation schema using Yup
   const validationSchema = Yup.object({
     name: Yup.string().required("الاسم مطلوب"),
@@ -18,9 +23,16 @@ const PartnershipForm = () => {
   });
 
   // Form submission handler
-  const handleSubmit = (values) => {
-    console.log(values);
-    // You can handle form submission here (e.g., API request)
+  const handleSubmit = async (values) => {
+    try {
+      await Axios.post("/landing/become-partner", values);
+      toast.success("تم إرسال النموذج بنجاح!");
+      setTimeout(() => {
+        navigate("/dashboard");
+      }, 2000); // Redirect after 2 seconds
+    } catch (error) {
+      toast.error("حدث خطأ أثناء إرسال النموذج. حاول مرة أخرى.");
+    }
   };
 
   return (
@@ -28,6 +40,7 @@ const PartnershipForm = () => {
       className="max-w-lg mx-5 md:mx-auto bg-[#EDF4FF] shadow-lg rounded-lg p-6 my-20"
       dir="rtl"
     >
+      <ToastContainer /> {/* Toast container for notifications */}
       <div className="flex flex-col gap-3 justify-center items-start">
         <img className="w-80" src={logoBlack} alt="" />
         <h2 className="text-2xl text-right text-[#0B236B] mb-4">كن مدرب</h2>
@@ -35,7 +48,6 @@ const PartnershipForm = () => {
           من فضلك أدخل جميع البيانات المطلوبة بشكل صحيح للتواصل معك
         </p>
       </div>
-
       <Formik
         initialValues={{ name: "", phone: "", email: "", linkedin: "" }}
         validationSchema={validationSchema}
@@ -43,7 +55,7 @@ const PartnershipForm = () => {
       >
         {() => (
           <Form className="space-y-5">
-            {/* Name Field */}
+            {/* Form Fields */}
             <div>
               <label
                 htmlFor="name"
@@ -64,7 +76,6 @@ const PartnershipForm = () => {
               />
             </div>
 
-            {/* Phone Field */}
             <div>
               <label
                 htmlFor="phone"
@@ -85,7 +96,6 @@ const PartnershipForm = () => {
               />
             </div>
 
-            {/* Email Field */}
             <div>
               <label
                 htmlFor="email"
@@ -106,7 +116,6 @@ const PartnershipForm = () => {
               />
             </div>
 
-            {/* LinkedIn Field */}
             <div>
               <label
                 htmlFor="linkedin"
@@ -137,7 +146,6 @@ const PartnershipForm = () => {
           </Form>
         )}
       </Formik>
-
       {/* Login Link */}
       <div className="text-center mt-4">
         <p className="text-sm ml-3 text-[#616161]">

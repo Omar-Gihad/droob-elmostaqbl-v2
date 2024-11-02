@@ -1,6 +1,8 @@
 import PropTypes from "prop-types";
+import { useNavigate } from "react-router-dom";
 
 const Card = ({ icon, name, desc, button, img, price, date }) => {
+  const nav = useNavigate();
   return (
     <div className="flex flex-col justify-between items-center bg-white border border-gray-200 rounded-lg shadow-md mb-6 w-[320px]">
       {/* Image */}
@@ -32,7 +34,10 @@ const Card = ({ icon, name, desc, button, img, price, date }) => {
           <button className="bg-white border border-[#0055D2] font-semibold text-[#0055D2] px-4 py-2 rounded flex-1">
             التسجيل
           </button>
-          <button className="bg-[#0055D2] text-white px-4 py-2 rounded flex-1">
+          <button
+            onClick={() => nav("/test")}
+            className="bg-[#0055D2] text-white px-4 py-2 rounded flex-1"
+          >
             {button}
           </button>
         </div>
