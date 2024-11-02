@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Card from "../components/Card";
 import business_course from "../assets/study courses/business_course.png";
 import Rating from "../assets/study courses/Rating.png";
@@ -7,6 +7,7 @@ import mobile from "../assets/study courses/mobile-course.png";
 import english from "../assets/study courses/english_course.png";
 import studying from "../assets/studying.png";
 import HeaderImage from "../components/HeaderImage";
+import { Axios } from "../utils/apiHandler";
 
 const StudyCourses = () => {
   const courses = [
@@ -47,6 +48,16 @@ const StudyCourses = () => {
       date: "يبدأ اليوم في 09.30 -12.00",
     },
   ];
+
+  const [data, setData] = useState([]);
+  console.log("🚀 ~ HeroSection ~ data:", data);
+
+  useEffect(() => {
+    Axios.get("/landing/courses").then((res) => {
+      setData(res.data.data);
+    });
+  }, []);
+
   return (
     <div className="bg-[#F8FBFB]" dir="rtl">
       <HeaderImage
@@ -66,7 +77,7 @@ const StudyCourses = () => {
       </div>
 
       {/* Cards Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 p-8 md:p-16">
+      {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 p-8 md:p-16">
         {courses.concat(courses).map((item, index) => (
           <Card
             key={index}
@@ -77,6 +88,21 @@ const StudyCourses = () => {
             button={item.button}
             img={item.img}
             date={item.date}
+          />
+        ))}
+      </div> */}
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 p-8 md:p-16">
+        {data.map((item, index) => (
+          <Card
+            key={index}
+            icon={item?.image}
+            name={item?.name}
+            desc={item?.desc}
+            price="60 رس"
+            button="عرض البرنامج"
+            img={Rating}
+            date={item?.start_date}
           />
         ))}
       </div>
