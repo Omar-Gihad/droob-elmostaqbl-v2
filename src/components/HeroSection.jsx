@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import React, { useContext } from "react";
 import { NavbarContext } from "../contexts/NavBarContext";
@@ -9,6 +9,8 @@ import img01 from "../assets/01.png";
 import img02 from "../assets/02.png";
 import img03 from "../assets/03.png";
 import man from "../assets/man.png";
+import axios from "axios";
+import { Axios } from "../utils/apiHandler";
 
 const HeroSection = () => {
   // state to control responsiive navbar
@@ -22,7 +24,15 @@ const HeroSection = () => {
     handleOptionClick,
     courses,
   } = useContext(NavbarContext); // Accessing the context
+  const [data, setData] = useState({});
+  console.log("🚀 ~ HeroSection ~ data:", data);
   const nav = useNavigate(); // React router navigation
+
+  useEffect(() => {
+    Axios.get("/landing/home").then((res) => {
+      setData(res.data.data.items);
+    });
+  }, []);
   return (
     <div className="bg-[url('assets/hero-mask.png')] bg-repeat-y bg-[#0B236B]">
       <nav className=" relative z-50 flex flex-row-reverse justify-between items-center text-[#CCCCDD] px-6 py-4 md:px-16">
@@ -355,7 +365,7 @@ const HeroSection = () => {
 
           {/* Images */}
           <img
-            src={man}
+            src={data?.image}
             alt="Person"
             className="md:w-[730px] md:bottom-[-1px] lg:w-[680px] xl:w-[550px] lg:bottom-[0px] xl:lg:bottom-0 relative z-10"
           />
