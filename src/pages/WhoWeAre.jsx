@@ -1,16 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "../index.css";
-import officeImg from "../assets/office.png";
 import longArrowRightW from "../assets/long-arrow-rightW.png";
 import longArrowRight from "../assets/long-arrow-right.png";
-import p1 from "../assets/p1.png";
-import p2 from "../assets/p2.png";
-import p3 from "../assets/p3.png";
-import wrapper from "../assets/wrapper.png";
-import office2 from "../assets/office2.png";
-import lamp from "../assets/lamp.png";
 import correct from "../assets/correct-circle.png";
-import rocket from "../assets/rocket.png";
 import aboutImage from "../assets/about-img.png";
 import { NavLink, useNavigate } from "react-router-dom";
 import HeaderImage from "../components/HeaderImage";
@@ -28,15 +20,12 @@ const WhoWeAre = () => {
     Axios.get("/landing/what-say").then((res) => {
       setData(res.data.data.item);
     });
-
     Axios.get("/landing/mission").then((res) => {
       setMission(res.data.data);
     });
-
     Axios.get("/landing/teams").then((res) => {
       setTeam(res.data.data);
     });
-
     Axios.get("/landing/goal").then((res) => {
       setGoal(res.data.data);
     });
