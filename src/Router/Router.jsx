@@ -13,6 +13,7 @@ import BlogPost from "../pages/BlogPost.jsx";
 import ContactUs1 from "../components/ContactUs1.jsx";
 import ContactUs2 from "../components/ContactUs2.jsx";
 import Error from "../pages/error/Error.jsx";
+import Test from "../pages/Test.jsx";
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
       {
         path: "who-we-are",
         element: <WhoWeAre />,
+      },
+      {
+        path: "test",
+        element: <Test />,
       },
       {
         path: "support-and-communication",

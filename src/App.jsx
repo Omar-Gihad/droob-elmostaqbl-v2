@@ -7,6 +7,7 @@ function App() {
   return (
     <div className="relative">
       <NavBar />
+
       <main>
         <Routes>
           <Route path="/" element={<HomePage />} />

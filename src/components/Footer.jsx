@@ -1,5 +1,4 @@
 import footer1 from "../assets/footer1.png";
-import footer2 from "../assets/footer2.png";
 import footer3 from "../assets/footer3.png";
 import ArrowBackIosRoundedIcon from "@mui/icons-material/ArrowBackIosRounded";
 import EmailIcon from "@mui/icons-material/Email";
@@ -10,15 +9,21 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import { Link } from "react-router-dom";
-
+import { Axios } from "../utils/apiHandler.js";
+import { useEffect, useState } from "react";
 const Footer = () => {
+  const [data,setData]=useState({})
   const scrollWindow = () => {
     window.scroll({
       behavior: "smooth",
       top: 0,
     });
   };
-
+  useEffect(()=>{
+    Axios.get('https://droob.medicalvisionarabia.com/api/landing/footer').then((res)=>{
+      setData(res.data.data.item)
+    })
+  },[])
   return (
     <>
       {/* Top Section with Statistics */}
@@ -64,10 +69,9 @@ const Footer = () => {
         <div className="bg-[#0B236B] px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 items-start py-14 text-white gap-x-8 gap-y-8">
           {/* Logo Section */}
           <div className="flex flex-col items-center gap-8 text-center sm:text-right">
-            <img src={footer2} alt="" className="w-[70%]" />
+            <img src={data.logo} alt="" className="w-[70%]" />
             <p className="text-sm leading-7">
-              ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة
-              مجهولة برص مجموعة من الأحرف بشكل
+              {data.per}
             </p>
           </div>
 
@@ -134,11 +138,11 @@ const Footer = () => {
             </div>
             <div className="flex gap-2 mb-4 text-sm">
               <EmailIcon />
-              <p>futureDroop@Email.com</p>
+              <p>{data.email}</p>
             </div>
             <div className="flex gap-2 mb-4 text-sm">
               <ContactsIcon />
-              <p>+96634579283</p>
+              <p>{data.phone}</p>
             </div>
             <div className="flex gap-2 items-center relative">
               <p>تابعنا:</p>
