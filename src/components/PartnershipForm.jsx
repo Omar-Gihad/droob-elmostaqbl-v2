@@ -48,7 +48,6 @@ const PartnershipForm = () => {
           من فضلك أدخل جميع البيانات المطلوبة بشكل صحيح للتواصل معك
         </p>
       </div>
-
       <Formik
         initialValues={{ name: "", phone: "", email: "", linkedin: "" }}
         validationSchema={validationSchema}
@@ -58,7 +57,10 @@ const PartnershipForm = () => {
           <Form className="space-y-5">
             {/* Form Fields */}
             <div>
-              <label htmlFor="name" className="block text-right mb-3 text-[#2C2C2C]">
+              <label
+                htmlFor="name"
+                className="block text-right mb-3 text-[#2C2C2C]"
+              >
                 الاسم رباعي
               </label>
               <Field
@@ -67,11 +69,18 @@ const PartnershipForm = () => {
                 name="name"
                 className="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
-              <ErrorMessage name="name" component="div" className="text-red-500 text-sm mt-1 text-right" />
+              <ErrorMessage
+                name="name"
+                component="div"
+                className="text-red-500 text-sm mt-1 text-right"
+              />
             </div>
 
             <div>
-              <label htmlFor="phone" className="block text-right mb-3 text-[#2C2C2C]">
+              <label
+                htmlFor="phone"
+                className="block text-right mb-3 text-[#2C2C2C]"
+              >
                 رقم الهاتف
               </label>
               <Field
@@ -80,11 +89,18 @@ const PartnershipForm = () => {
                 name="phone"
                 className="w-full p-3 border text-right border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
-              <ErrorMessage name="phone" component="div" className="text-red-500 text-sm mt-1 text-right" />
+              <ErrorMessage
+                name="phone"
+                component="div"
+                className="text-red-500 text-sm mt-1 text-right"
+              />
             </div>
 
             <div>
-              <label htmlFor="email" className="block text-right mb-3 text-[#2C2C2C]">
+              <label
+                htmlFor="email"
+                className="block text-right mb-3 text-[#2C2C2C]"
+              >
                 البريد الإلكتروني
               </label>
               <Field
@@ -93,11 +109,18 @@ const PartnershipForm = () => {
                 name="email"
                 className="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
-              <ErrorMessage name="email" component="div" className="text-red-500 text-sm mt-1 text-right" />
+              <ErrorMessage
+                name="email"
+                component="div"
+                className="text-red-500 text-sm mt-1 text-right"
+              />
             </div>
 
             <div>
-              <label htmlFor="linkedin" className="block text-right mb-3 text-[#2C2C2C]">
+              <label
+                htmlFor="linkedin"
+                className="block text-right mb-3 text-[#2C2C2C]"
+              >
                 الملف الشخصي (LINKEDIN)
               </label>
               <Field
@@ -106,7 +129,11 @@ const PartnershipForm = () => {
                 name="linkedin"
                 className="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
-              <ErrorMessage name="linkedin" component="div" className="text-red-500 text-sm mt-1 text-right" />
+              <ErrorMessage
+                name="linkedin"
+                component="div"
+                className="text-red-500 text-sm mt-1 text-right"
+              />
             </div>
 
             {/* Submit Button */}
@@ -119,12 +146,14 @@ const PartnershipForm = () => {
           </Form>
         )}
       </Formik>
-
       {/* Login Link */}
       <div className="text-center mt-4">
         <p className="text-sm ml-3 text-[#616161]">
           لديك حساب بالفعل؟
-          <Link to="/login" className="text-[#0055D2] mr-3 font-bold hover:underline">
+          <Link
+            to="/login"
+            className="text-[#0055D2] mr-3 font-bold hover:underline"
+          >
             تسجيل الدخول
           </Link>
         </p>

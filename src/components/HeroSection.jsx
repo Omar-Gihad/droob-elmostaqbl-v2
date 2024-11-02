@@ -8,7 +8,6 @@ import chevronDown from "../assets/chevron-down.png";
 import img01 from "../assets/01.png";
 import img02 from "../assets/02.png";
 import img03 from "../assets/03.png";
-import man from "../assets/man.png";
 import { Axios } from "../utils/apiHandler";
 
 const HeroSection = () => {
