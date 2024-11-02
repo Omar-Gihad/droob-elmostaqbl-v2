@@ -24,7 +24,7 @@ const HeroSection = () => {
   } = useContext(NavbarContext); // Accessing the context
   const nav = useNavigate(); // React router navigation
   return (
-    <div className="bg-[url('assets/hero-mask.png')] bg-repeat-y">
+    <div className="bg-[url('assets/hero-mask.png')] bg-repeat-y bg-[#0B236B]">
       <nav className=" relative z-50 flex flex-row-reverse justify-between items-center text-[#CCCCDD] px-6 py-4 md:px-16">
         <img
           onClick={() => nav(`/`)}
