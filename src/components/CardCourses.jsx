@@ -1,6 +1,8 @@
 import PropTypes from "prop-types";
+import { useNavigate } from "react-router-dom";
 
 const CardCourses = ({ icon, name, desc, button, img, price, date }) => {
+  const nav = useNavigate();
   return (
     <div
       dir="rtl"
@@ -25,7 +27,10 @@ const CardCourses = ({ icon, name, desc, button, img, price, date }) => {
           <p className="text-[#0055D2] text-sm sm:text-xl font-bold">{price}</p>
         </div>
         <div className="flex items-center justify-between gap-2 mb-3">
-          <button className="bg-[#0055D2] text-white py-1 px-2 sm:py-2 rounded flex-1">
+          <button
+            onClick={() => nav("/test")}
+            className="bg-[#0055D2] text-white py-1 px-2 sm:py-2 rounded flex-1"
+          >
             {button}
           </button>
           <button className="bg-white border border-[#0055D2] font-semibold text-[#0055D2] py-1 px-2 sm:py-2 rounded flex-1">
