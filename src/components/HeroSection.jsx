@@ -330,6 +330,7 @@ const HeroSection = () => {
 
       <div className="flex flex-col md:flex-row-reverse justify-between  text-white px-8 md:px-20">
         <div className="flex flex-col items-end pt-32 mb-8 lg:mb-0 ">
+          {/* <h1>{data?.head}</h1> */}
           <h1 className="text-right text-xl lg:text-3xl font-bold mb-4 ">
             وصول غير محدود إلى 500+ دورة تدريبية وبرامج
           </h1>
