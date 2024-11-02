@@ -149,7 +149,7 @@ const HeroSection = () => {
               }}
               className="items-center"
             >
-              انضم كشريك
+              انضم كمدرب
             </button>
           </Link>
 

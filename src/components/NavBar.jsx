@@ -146,7 +146,7 @@ const NavBar = () => {
               setSelectedOption("");
             }}
           >
-            انضم كشريك
+            انضم كمدرب
           </button>
         </Link>
 

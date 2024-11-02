@@ -30,7 +30,7 @@ const PartnershipForm = () => {
     >
       <div className="flex flex-col gap-3 justify-center items-start">
         <img className="w-80" src={logoBlack} alt="" />
-        <h2 className="text-2xl text-right text-[#0B236B] mb-4">كن شريكك</h2>
+        <h2 className="text-2xl text-right text-[#0B236B] mb-4">كن مدرب</h2>
         <p className="text-right text-[#616161] mb-6">
           من فضلك أدخل جميع البيانات المطلوبة بشكل صحيح للتواصل معك
         </p>
