@@ -8,6 +8,10 @@ import chevronDown from "../assets/chevron-down.png";
 import img01 from "../assets/01.png";
 import img02 from "../assets/02.png";
 import img03 from "../assets/03.png";
+<<<<<<< HEAD
+=======
+import man from "../assets/man.png";
+>>>>>>> 8c7c1b7d47ee53d3cab1cc5dc191b2dba49cafb4
 import { Axios } from "../utils/apiHandler";
 
 const HeroSection = () => {
@@ -23,7 +27,7 @@ const HeroSection = () => {
     courses,
   } = useContext(NavbarContext); // Accessing the context
   const [data, setData] = useState({});
-  console.log("🚀 ~ HeroSection ~ data:", data);
+  // console.log("🚀 ~ HeroSection ~ data:", data);
   const nav = useNavigate(); // React router navigation
 
   useEffect(() => {
@@ -31,6 +35,9 @@ const HeroSection = () => {
       setData(res.data.data.items);
     });
   }, []);
+
+  const headText = data.head ? data.head.split("&nbsp;") : ["", ""];
+
   return (
     <div className="bg-[url('assets/hero-mask.png')] bg-repeat-y bg-[#0B236B]">
       <nav className=" relative z-50 flex flex-row-reverse justify-between items-center text-[#CCCCDD] px-6 py-4 md:px-16">
@@ -328,18 +335,14 @@ const HeroSection = () => {
 
       <div className="flex flex-col md:flex-row-reverse justify-between  text-white px-8 md:px-20">
         <div className="flex flex-col items-end pt-32 mb-8 lg:mb-0 ">
+          {/* <h1>{data?.head}</h1> */}
           <h1 className="text-right text-xl lg:text-3xl font-bold mb-4 ">
-            وصول غير محدود إلى 500+ دورة تدريبية وبرامج
+            {headText[0]}
           </h1>
           <h1 className="text-right text-xl lg:text-3xl font-bold mb-4 ">
-            شهادات معتمدة - وكلها مدرجة في اشتراكك
+            {headText[1]}
           </h1>
-          <p className="text-right text-[8px] lg:text-[12px]">
-            ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة
-          </p>
-          <p className="text-right text-[8px] lg:text-[12px] mb-4 ">
-            مجهولة برص مجموعة من الأحرف بشكل
-          </p>
+          <p className="text-right text-[8px] lg:text-[12px]">{data.per}</p>
 
           <div className="flex flex-row-reverse gap-8 pt-4">
             <button
